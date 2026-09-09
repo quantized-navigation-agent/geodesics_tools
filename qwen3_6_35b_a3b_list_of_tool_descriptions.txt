@@ -1,0 +1,78 @@
+
+  Each tool is a list of actions that affect the position of the agent. When a
+  tool is selected all its actions are implemented until collision, reaching the
+  goal, or exhaustion of the list. Each tool is named by its actions, one letter
+  per step: U=up (-1,0), D=down (1,0), L=left (0,-1), R=right (0,1), W=wait (0,0).
+
+  Available tools are:
+  
+ ====================tool WWWWW ====================:
+ total displacement: no movement
+action list: hold five steps
+strategy: does nothing 
+ ====================end description tool WWWWW ====================:
+
+
+ ====================tool UWWWW ====================:
+ total displacement: one row up, no sideways change
+action list: up once, then hold four steps
+strategy: a single step up followed by waiting 
+ ====================end description tool UWWWW ====================:
+
+
+ ====================tool DWWWW ====================:
+ total displacement: one row down, no sideways change
+action list: down once, then hold four steps
+strategy: a single step down followed by waiting 
+ ====================end description tool DWWWW ====================:
+
+
+ ====================tool LWWWW ====================:
+ total displacement: one column to the left, no vertical change
+action list: left once, then hold four steps
+strategy: a single step left followed by waiting 
+ ====================end description tool LWWWW ====================:
+
+
+ ====================tool RWWWW ====================:
+ total displacement: one column to the right, no vertical change
+action list: right once, then hold four steps
+strategy: a single step right followed by waiting 
+ ====================end description tool RWWWW ====================:
+
+
+ ====================tool DRDRD ====================:
+ total displacement: three rows down and two columns to the right
+action list: down once, then right once, then down once, then right once, then down once
+strategy: a staircase pattern moving steadily toward the bottom-right 
+ ====================end description tool DRDRD ====================:
+
+
+ ====================tool RRRRR ====================:
+ total displacement: five columns to the right, no row change
+action list: right five times
+strategy: a straight run towards the right side 
+ ====================end description tool RRRRR ====================:
+
+
+ ====================tool DDDDD ====================:
+ total displacement: five rows down, no sideways change
+action list: down five times
+strategy: a straight vertical run downwards 
+ ====================end description tool DDDDD ====================:
+
+
+ ====================tool DRRRR ====================:
+ total displacement: one row down and four columns to the right
+action list: down once, then right four times
+strategy: a single step down followed by a straight run to the right 
+ ====================end description tool DRRRR ====================:
+
+
+ ====================tool DDRDD ====================:
+ total displacement: four rows down and one column to the right
+action list: down twice, then right once, then down twice
+strategy: a vertical descent with a single rightward step 
+ ====================end description tool DDRDD ====================:
+
+  
